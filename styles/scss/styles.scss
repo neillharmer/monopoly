@@ -1,12 +1,19 @@
+
+// imports
+@import "mixins";
+@import "variables";
+
+
+// let the coding begin! 
 body {
-	background: #FFF;
+	background: $white;
 	margin: 0;
 	min-width: 1075px;
+	font: 12px/1 $primaryFont;
 }
 
 td {
 	font-size: 12px;
-	font-family: arial, sans-serif;
 	border: 1px solid black;
 	text-align: center;
 }
