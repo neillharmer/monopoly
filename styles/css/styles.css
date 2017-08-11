@@ -1,20 +1,249 @@
+/* STYLES
+------------------------------------------------------------ */
+/*
+	by Neill Harmer, @neillharmer
+*/
 /* MIXINS
 ------------------------------------------------------------ */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
-body {
-  background: #fff;
-  margin: 0;
-  min-width: 1075px;
-  font: 12px/1 "Nunito Sans", sans-serif; }
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900");
+/* GENERAL CALLINGS
+------------------------------------------------------------ */
+::-moz-selection {
+  background: #ed1b24;
+  color: #fff; }
+::selection {
+  background: #ed1b24;
+  color: #fff; }
 
-td {
-  font-size: 12px;
-  border: 1px solid black;
+a {
+  color: #ed1b24;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out; }
+  a:hover {
+    color: #0072bb; }
+
+/* HEADINGS
+------------------------------------------------------------ */
+h1 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h1 a {
+    color: inherit;
+    text-decoration: underline; }
+    h1 a:hover {
+      color: #00030c; }
+
+h2 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h2 a {
+    color: inherit;
+    text-decoration: underline; }
+    h2 a:hover {
+      color: #00030c; }
+
+h3 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h3 a {
+    color: inherit;
+    text-decoration: underline; }
+    h3 a:hover {
+      color: #00030c; }
+
+h4 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h4 a {
+    color: inherit;
+    text-decoration: underline; }
+    h4 a:hover {
+      color: #00030c; }
+
+h5 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h5 a {
+    color: inherit;
+    text-decoration: underline; }
+    h5 a:hover {
+      color: #00030c; }
+
+h6 {
+  margin: 0 0 30px;
+  font: normal 48px #bfc0bf;
+  line-height: 1.4;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  h6 a {
+    color: inherit;
+    text-decoration: underline; }
+    h6 a:hover {
+      color: #00030c; }
+
+h1 {
+  font-size: 50px; }
+
+h2 {
+  font-size: 46px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+/* GENERAL CALLINGS
+------------------------------------------------------------ */
+p {
+  margin: 0 0 20px 0; }
+
+.center {
   text-align: center; }
 
-#setup {
-  display: none;
-  margin: 15px; }
+.text-right {
+  text-align: right; }
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  font: 14px "Nunito Sans", sans-serif;
+  line-height: 1.5;
+  color: #00030c;
+  background: #fff;
+  border: 1px solid #efefef !important;
+  padding: 10px;
+  border-radius: 0 !important;
+  outline: none !important; }
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto; }
+
+table {
+  margin: 0 0 35px 0; }
+  table tr,
+  table td {
+    vertical-align: top; }
+    table tr p,
+    table td p {
+      margin-bottom: 5px !important; }
+
+ul {
+  margin: 0 0 10px 0;
+  list-style-type: square; }
+  ul:last-child {
+    margin: 0; }
+  ul li {
+    margin-bottom: 5px; }
+
+.btn {
+  background-color: #ed1b24;
+  background-size: 100%;
+  background-image: linear-gradient(to right, #ed1b24, #0072bb);
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px 30px !important;
+  border: none;
+  font: 15px/1 "Nunito Sans", sans-serif;
+  color: #fff !important;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  text-transform: none !important; }
+  .btn::before {
+    background-image: linear-gradient(to right, #0072bb, #ed1b24);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.5s; }
+  .btn:hover::before {
+    opacity: 1; }
+
+.warning {
+  font-size: small; }
+
+/* BODY and CONTAINERS
+------------------------------------------------------------ */
+html {
+  height: 100%;
+  min-height: 100%;
+  width: 100%; }
+
+body {
+  font: 13px/1 "Nunito Sans", sans-serif;
+  color: #00030c;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e4e6e5; }
+
+#setup,
+#noF5,
+#moneybar,
+#option,
+#refresh,
+#board,
+#control,
+#trade,
+#manage,
+#popupwrap,
+#popupbackground,
+#statswrap,
+#statsbackground,
+#deed,
+.die,
+.enlarge,
+.propertycelldeed,
+.cell-owner {
+  display: none; }
 
 #moneybar {
   float: right;
@@ -22,7 +251,6 @@ td {
   background-color: white;
   margin: 15px;
   border-radius: 5px;
-  display: none;
   z-index: 14;
   position: relative;
   cursor: default;
@@ -49,18 +277,7 @@ td {
 #propertystats {
   margin-right: 110px; }
 
-#refresh {
-  display: none;
-  margin: 15px; }
-
-#noF5 {
-  display: none; }
-
-#noscript {
-  margin-left: 10px; }
-
 #board {
-  display: none;
   border: 2px solid black;
   border-spacing: 3px;
   margin: 25px;
@@ -82,7 +299,6 @@ td {
   left: 250px;
   border: 2px solid black;
   padding: 10px;
-  display: none;
   background-color: white; }
 
 #quickstats {
@@ -118,13 +334,11 @@ td {
 
 #manage {
   width: 308px;
-  border: 1px solid gray;
-  display: none; }
+  border: 1px solid gray; }
 
 #option {
   border-bottom: 1px solid gray;
   background-color: white;
-  display: none;
   background: white;
   vertical-align: middle;
   padding: 3px;
@@ -165,7 +379,6 @@ td {
 
 #trade {
   border: 2px solid black;
-  display: none;
   width: 630px;
   margin: 15px auto;
   background-color: white;
@@ -276,7 +489,6 @@ td {
   top: 255px;
   left: 0px;
   width: 100%;
-  display: none;
   background-color: transparent;
   z-index: 13;
   -webkit-user-select: none;
@@ -314,7 +526,6 @@ td {
   left: 0px;
   background-color: #000000;
   opacity: 0.5;
-  display: none;
   z-index: 10; }
 
 #popupdrag {
@@ -343,21 +554,20 @@ td {
   top: 0px;
   left: 0px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 #statswrap {
   position: absolute;
   top: 250px;
   left: 0px;
   width: 100%;
-  display: none;
   background-color: transparent;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 #statstext {
   overflow: hidden;
@@ -383,7 +593,6 @@ td {
   left: 0px;
   background-color: #000000;
   opacity: .5;
-  display: none;
   z-index: 16; }
 
 #statsdrag {
@@ -394,7 +603,6 @@ td {
   cursor: move; }
 
 #deed {
-  display: none;
   position: fixed;
   border: 2px solid black;
   width: 235px;
@@ -402,9 +610,9 @@ td {
   background-color: white;
   z-index: 18;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 #deed td {
   border: none; }
@@ -487,7 +695,6 @@ td {
   overflow: hidden; }
 
 .die {
-  display: none;
   margin: 5px;
   float: left; }
 
@@ -548,7 +755,6 @@ td {
 .enlarge {
   width: 150px;
   height: 200px;
-  display: none;
   background-color: white;
   border: 2px solid black;
   text-align: center;
@@ -618,8 +824,7 @@ td {
   width: 18px;
   height: 20px;
   border: 1px solid grey;
-  cursor: pointer;
-  display: none; }
+  cursor: pointer; }
 
 .statscellcolor {
   padding: 0px;
@@ -681,7 +886,6 @@ td {
 
 .cell-owner {
   background-size: cover;
-  display: none;
   position: absolute; }
 
 .board-top .cell-owner {
