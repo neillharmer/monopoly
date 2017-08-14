@@ -27,11 +27,10 @@ a {
 ------------------------------------------------------------ */
 h1 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h1 a {
     color: inherit;
     text-decoration: underline; }
@@ -40,11 +39,10 @@ h1 {
 
 h2 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h2 a {
     color: inherit;
     text-decoration: underline; }
@@ -53,11 +51,10 @@ h2 {
 
 h3 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h3 a {
     color: inherit;
     text-decoration: underline; }
@@ -66,11 +63,10 @@ h3 {
 
 h4 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h4 a {
     color: inherit;
     text-decoration: underline; }
@@ -79,11 +75,10 @@ h4 {
 
 h5 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h5 a {
     color: inherit;
     text-decoration: underline; }
@@ -92,11 +87,10 @@ h5 {
 
 h6 {
   margin: 0 0 30px;
-  font: normal 48px #bfc0bf;
+  font: 900 48px "Nunito Sans", sans-serif;
   line-height: 1.4;
-  color: black;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  color: #bfc0bf;
+  letter-spacing: -1px; }
   h6 a {
     color: inherit;
     text-decoration: underline; }
@@ -245,6 +239,11 @@ body {
 .cell-owner {
   display: none; }
 
+.max-contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+
 #moneybar {
   float: right;
   border: 0px solid black;
@@ -258,10 +257,6 @@ body {
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none; }
-
-#moneybar table {
-  font-weight: bold;
-  border-spacing: 1px; }
 
 #moneybarwrap {
   position: absolute;
@@ -281,7 +276,7 @@ body {
   border: 2px solid black;
   border-spacing: 3px;
   margin: 25px;
-  float: left; }
+  background: #cde6d0; }
 
 #jail {
   border: 1px solid black;
@@ -296,50 +291,100 @@ body {
   position: absolute;
   z-index: 9;
   top: 250px;
-  left: 250px;
-  border: 2px solid black;
+  left: 225px;
   padding: 10px;
-  background-color: white; }
+  background-color: #fff;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.3); }
+  #control table {
+    margin-bottom: 0; }
+
+#menu {
+  width: 290px;
+  min-height: 32px;
+  margin: 0 15px; }
+  #menu #menutable {
+    padding: 0;
+    font: 900 12px/1 "Nunito Sans", sans-serif;
+    width: 99%;
+    margin: 0;
+    overflow: hidden;
+    /*.menu-item {
+			padding: 0;
+			border-collapse: collapse;
+			text-align: center;
+			display: table-cell;
+			border: none;
+			border-right: 2px solid white;
+			height: 30px;
+			min-width: 90px;
+			width: 90px;
+			max-width: 90px;
+			overflow: hidden;
+		}*/ }
+    #menu #menutable a {
+      background-color: #e4e6e5;
+      text-transform: uppercase;
+      border-radius: 2px 2px 0 0;
+      color: #0072bb;
+      text-decoration: none;
+      display: block;
+      margin-right: 4px;
+      height: 100%;
+      width: 100%;
+      padding: 12px;
+      text-align: center; }
+
+#buy-menu-item {
+  color: #FFFFFF;
+  margin-left: 2px;
+  border-left: none; }
+
+#trade-menu-item {
+  color: #AAAAAA;
+  border-right: none;
+  margin-right: 2px; }
 
 #quickstats {
-  font-size: 12px;
-  font-weight: bold;
-  font-family: arial, sans-serif;
-  border: 2px solid blue;
-  margin: 5px;
-  padding: 3px;
+  font: 11px/1 "Nunito Sans", sans-serif;
+  border: 3px solid blue;
+  margin: 32px 0 15px 0;
+  padding: 10px;
   width: 80px; }
-
-#pname {
-  background-color: white; }
-
-#landed {
-  padding: 3px;
-  border: 1px solid gray;
-  border-top: none;
-  width: 302px;
-  margin: 0px;
-  text-align: center; }
+  #quickstats #pname {
+    text-transform: uppercase;
+    font-weight: 900; }
+  #quickstats #pmoney {
+    display: block;
+    font-size: 15px;
+    padding: 5px 0 0; }
 
 #alert {
-  width: 307px;
-  height: 92px;
-  margin: 0px;
-  padding-left: 1px;
-  border: 1px solid gray;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 13px;
-  background-color: #FFFFFF;
+  width: 350px;
+  height: 275px;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  border: 1px solid #e4e6e5;
+  font: 13px/1.5 "Nunito Sans", sans-serif;
+  background-color: #fff;
   overflow-y: scroll; }
+
+#landed {
+  padding: 6px 10px;
+  font: 13px/1 "Nunito Sans", sans-serif !important;
+  border: 1px solid #e4e6e5;
+  background-color: #e4e6e5;
+  border-top: none;
+  width: 350px;
+  margin: 0; }
 
 #manage {
   width: 308px;
   border: 1px solid gray; }
 
 #option {
-  border-bottom: 1px solid gray;
-  background-color: white;
-  background: white;
+  border-bottom: 1px solid #e4e6e5;
+  background-color: #fff;
+  background: #fff;
   vertical-align: middle;
   padding: 3px;
   text-align: center;
@@ -350,18 +395,16 @@ body {
   height: 21px;
   font-size: 16px;
   font-weight: bold; }
-
-#buildings .house {
-  width: 25px;
-  height: 19px;
-  vertical-align: top;
-  float: none; }
-
-#buildings .hotel {
-  width: 26px;
-  height: 19px;
-  vertical-align: top;
-  float: none; }
+  #buildings .house {
+    width: 25px;
+    height: 19px;
+    vertical-align: top;
+    float: none; }
+  #buildings .hotel {
+    width: 26px;
+    height: 19px;
+    vertical-align: top;
+    float: none; }
 
 #owned {
   padding: 3px 0px;
@@ -369,9 +412,6 @@ body {
   text-align: center;
   max-height: 390px;
   overflow-y: auto; }
-
-#owned .propertycellname {
-  vertical-align: top; }
 
 #property {
   margin-right: 1px;
@@ -418,51 +458,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   background-color: white; }
-
-#menu {
-  width: 290px;
-  height: 32px;
-  margin: 0px 10px; }
-
-#menutable {
-  padding: 0px;
-  text-align: left;
-  font-family: arial, sans-serif;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  border: 1px solid blue;
-  border-radius: 5px 5px 0px 0px;
-  height: 30px;
-  width: 99%;
-  margin: 0px;
-  background-color: #305BC9;
-  /* background-image: -webkit-linear-gradient(bottom,#213EB2,#4787ED);
-	background-image: -moz-linear-gradient(bottom,#213EB2,#4787ED); */
-  background-image: url(images/menu_background.png);
-  /* background-repeat: repeat-x; */
-  overflow: hidden; }
-
-#menutable td {
-  vertical-align: top; }
-
-#menu a {
-  color: #FFFFFF;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding-top: 8px; }
-
-#buy-menu-item {
-  color: #FFFFFF;
-  margin-left: 2px;
-  border-left: none; }
-
-#trade-menu-item {
-  color: #AAAAAA;
-  border-right: none;
-  margin-right: 2px; }
 
 #popup {
   width: 300px;
@@ -671,32 +666,11 @@ body {
   bottom: 20px;
   font-size: 16px; }
 
-#enlarge-wrap {
-  border: none;
-  z-index: 0; }
-
-.menu-item:hover {
-  /* background-image: -webkit-linear-gradient(bottom,#000080,#4787ED);
-	background-image: -moz-linear-gradient(bottom,#000080,#4787ED); */
-  background-image: url(images/menu_background_hover.png); }
-
-.menu-item {
-  padding: 0px;
-  border-collapse: collapse;
-  text-align: center;
-  display: table-cell;
-  background-color: transparent;
-  border: none;
-  border-right: 2px solid white;
-  height: 30px;
-  min-width: 90px;
-  width: 90px;
-  max-width: 90px;
-  overflow: hidden; }
-
 .die {
   margin: 5px;
-  float: left; }
+  float: left;
+  width: 35px;
+  height: 35px; }
 
 .die-no-img {
   border-radius: 6px;
@@ -878,11 +852,8 @@ body {
   position: relative; }
 
 .cell-position {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
+  height: 16px;
+  width: 16px; }
 
 .cell-owner {
   background-size: cover;

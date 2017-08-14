@@ -78,7 +78,7 @@
 		},
 	"\/images\/Die_1.png": {
 		"ft": 32768,
-		"iS": 570,
+		"iS": 1065,
 		"oA": 1,
 		"oAP": "\/images\/Die_1.png",
 		"oF": 0,
@@ -89,7 +89,7 @@
 		},
 	"\/images\/Die_2.png": {
 		"ft": 32768,
-		"iS": 655,
+		"iS": 1523,
 		"oA": 1,
 		"oAP": "\/images\/Die_2.png",
 		"oF": 0,
@@ -100,7 +100,7 @@
 		},
 	"\/images\/Die_3.png": {
 		"ft": 32768,
-		"iS": 826,
+		"iS": 1888,
 		"oA": 1,
 		"oAP": "\/images\/Die_3.png",
 		"oF": 0,
@@ -111,7 +111,7 @@
 		},
 	"\/images\/Die_4.png": {
 		"ft": 32768,
-		"iS": 860,
+		"iS": 2119,
 		"oA": 1,
 		"oAP": "\/images\/Die_4.png",
 		"oF": 0,
@@ -122,7 +122,7 @@
 		},
 	"\/images\/Die_5.png": {
 		"ft": 32768,
-		"iS": 994,
+		"iS": 2444,
 		"oA": 1,
 		"oAP": "\/images\/Die_5.png",
 		"oF": 0,
@@ -133,7 +133,7 @@
 		},
 	"\/images\/Die_6.png": {
 		"ft": 32768,
-		"iS": 1067,
+		"iS": 2737,
 		"oA": 1,
 		"oAP": "\/images\/Die_6.png",
 		"oF": 0,

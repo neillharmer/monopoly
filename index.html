@@ -44,7 +44,8 @@
 </div>
 
 
-<div class="container">
+
+<div class="max-contain">
 
 	<h1 id="noscript">This page will not function without JavaScript. Sorry about that, we think you would have enjoyed the game though!</h1>
 
@@ -272,9 +273,9 @@
 				<option>3</option>
 				<option selected="selected">4</option>
 				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
+				<!-- <option>6</option> -->
+				<!-- <option>7</option> -->
+				<!-- <option>8</option> -->
 			</select>
 		</p>
 
@@ -292,25 +293,13 @@
 	<div id="control">
 		<table>
 			<tr>
-				<td style="text-align: left; vertical-align: top; border: none;">
-					<div id="menu">
-						<table id="menutable" cellspacing="0">
-							<tr>
-								<td class="menu-item" id="buy-menu-item">
-
-									<a href="javascript:void(0);" title="View alerts and buy the property you landed on.">Buy</a>
-								</td>
-								<td class="menu-item" id="manage-menu-item">
-
-									<a href="javascript:void(0);" title="View, mortgage, and improve your property. ">Manage</a>
-								</td>
-								<td class="menu-item" id="trade-menu-item">
-
-									<a href="javascript:void(0);" title="Exchange property with other players.">Trade</a>
-								</td>
-							</tr>
-						</table>
-					</div>
+				<td>
+					
+					<ul class="menu">
+						<li id="buy-menu-item"><a href="javascript:void(0);" title="View alerts and buy the property you landed on.">Buy</a></li>
+						<li id="manage-menu-item"><a href="javascript:void(0);" title="View, mortgage, and improve your property. ">Manage</a></li>
+						<li id="trade-menu-item"><a href="javascript:void(0);" title="Exchange property with other players.">Trade</a></li>
+					</ul>
 
 					<div id="buy">
 						<div id="alert"></div>
@@ -327,30 +316,31 @@
 						<div id="owned"></div>
 					</div>
 				</td>
-				<td style="vertical-align: top; border: none;">
-					<div id="quickstats" style="">
-							<div><span id="pname" >Player 1</span>:</div>
-							<div><span id="pmoney">$1500</span></div>
+				<td>
+					
+					<div id="quickstats">
+						<strong id="pname">Player 1</strong>:
+						<span id="pmoney">$1500</span>
 					</div>
+					
 					<div>
 						<div id="die0" title="Die" class="die die-no-img"></div>
 						<div id="die1" title="Die" class="die die-no-img"></div>
 					</div>
 
 				</td>
-			</tr><tr>
-				<td colspan="2" style="border: none">
-					<div style="padding-top: 8px;">
-						<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." value="Roll Dice"/>
-						<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" />
-					</div>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." class="btn" value="Roll Dice"/>
+					<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" class="btn btn-action" />
 				</td>
 			</tr>
 		</table>
 	</div>
 
 	<div id="trade">
-		<table style="border-spacing: 3px;">
+		<table>
 			<tr>
 				<td class="trade-cell">
 					<div id="trade-leftp-name"></div>
