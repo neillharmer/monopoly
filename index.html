@@ -200,63 +200,63 @@
 
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p0arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p0moneybar" class="moneybarcell">
-						<div><span id="p0moneyname" >Player 0</span>:</div>
+						<div><strong id="p0moneyname" >Player 0</strong>:</div>
 						<div>$<span id="p0money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow1" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p1arrow" class="money-bar-arrow" alt=">"/></td>
 					<td id="p1moneybar" class="moneybarcell">
-						<div><span id="p1moneyname" >Player 1</span>:</div>
+						<div><strong id="p1moneyname" >Player 1</strong>:</div>
 						<div>$<span id="p1money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow2" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p2arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p2moneybar" class="moneybarcell">
-						<div><span id="p2moneyname" >Player 2</span>:</div>
+						<div><strong id="p2moneyname" >Player 2</strong>:</div>
 						<div>$<span id="p2money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow3" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p3arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p3moneybar" class="moneybarcell">
-						<div><span id="p3moneyname" >Player 3</span>:</div>
+						<div><strong id="p3moneyname" >Player 3</strong>:</div>
 						<div>$<span id="p3money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow4" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p4arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p4moneybar" class="moneybarcell">
-						<div><span id="p4moneyname" >Player 4</span>:</div>
+						<div><strong id="p4moneyname" >Player 4</strong>:</div>
 						<div>$<span id="p4money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow5" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p5arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p5moneybar" class="moneybarcell">
-						<div><span id="p5moneyname" >Player 5</span>:</div>
+						<div><strong id="p5moneyname" >Player 5</strong>:</div>
 						<div>$<span id="p5money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow6" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p6arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p6moneybar" class="moneybarcell">
-						<div><span id="p6moneyname" >Player 6</span>:</div>
+						<div><strong id="p6moneyname" >Player 6</strong>:</div>
 						<div>$<span id="p6money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow7" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="images/arrow.png" id="p7arrow" class="money-bar-arrow" alt=">" /></td>
 					<td id="p7moneybar" class="moneybarcell">
-						<div><span id="p7moneyname" >Player 7</span>:</div>
+						<div><strong id="p7moneyname" >Player 7</strong>:</div>
 						<div>$<span id="p7money">1500</span></div>
 					</td>
 				</tr>
 				<tr id="moneybarrow8">
 					<td style="border: none;" class="moneybararrowcell">&nbsp;</td>
 					<td style="border: none;">
-						<input type="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
+						<input type="button" id="viewstats" class="btn" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
 					</td>
 				</tr>
 			</table>
@@ -266,77 +266,68 @@
 
 	<!-- First screen, player select ////////////////////////////////////////////////// -->
 	<div id="setup">
-		<p>Select number of players.
+		<p><strong>How many people are playing? </strong>
 		
 			<select id="playernumber" title="Select the number of players for the game.">
 				<option>2</option>
 				<option>3</option>
 				<option selected="selected">4</option>
 				<option>5</option>
-				<!-- <option>6</option> -->
-				<!-- <option>7</option> -->
-				<!-- <option>8</option> -->
+				<option>6</option>
+				<!-- <option>7</option>
+				<option>8</option> -->
 			</select>
 		</p>
 
 		<div id="player-wrappers"></div>
 
 		<p class="button-wrapper">
-			<input type="button" value="Start Game" onclick="game_ns.setup();" title="Begin playing." class="btn" />
+			<input type="button" value="Start Game" onclick="game_ns.setup();" title="Begin playing." class="btn btn-full" />
 		</p>
 
-		<p class="warning" id="noF5"><strong>Note</strong>: Refreshing this page or navigating away from it may end your game without warning.</p>
+		<p class="warning" id="noF5"><strong>Note</strong>: Refreshing this page or navigating away from it will end your game.</p>
 	</div>
 
 
 	<!-- Buy Manage and Trade Window ////////////////////////////////////////////////// -->
 	<div id="control">
-		<table>
-			<tr>
-				<td>
-					
-					<ul class="menu">
-						<li id="buy-menu-item"><a href="javascript:void(0);" title="View alerts and buy the property you landed on.">Buy</a></li>
-						<li id="manage-menu-item"><a href="javascript:void(0);" title="View, mortgage, and improve your property. ">Manage</a></li>
-						<li id="trade-menu-item"><a href="javascript:void(0);" title="Exchange property with other players.">Trade</a></li>
-					</ul>
+		
+		<div id="quickstats">
+			<strong id="pname">Player 1</strong>:
+			<span id="pmoney">$1500</span>
+		</div>
+		
+		<div class="the-dice">
+			<div id="die0" title="Die" class="die die-no-img"></div>
+			<div id="die1" title="Die" class="die die-no-img"></div>
+		</div>
+		
+		<ul class="menu">
+			<li id="buy-menu-item"><a href="javascript:void(0);" title="View alerts and buy the property you landed on.">Buy</a></li>
+			<li id="manage-menu-item"><a href="javascript:void(0);" title="View, mortgage, and improve your property. ">Manage</a></li>
+			<li id="trade-menu-item"><a href="javascript:void(0);" title="Exchange property with other players.">Trade</a></li>
+		</ul>
 
-					<div id="buy">
-						<div id="alert"></div>
-						<div id="landed"></div>
-					</div>
+		<div id="buy">
+			<div id="alert"></div>
+			<div id="landed"></div>
+		</div>
 
-					<div id="manage">
-						<div id="option">
-							<div id="buildings" title="Available buildings"></div>
-							<input type="button" value="Buy house" id="buyhousebutton"/>
-							<input type="button" value="Mortgage" id="mortgagebutton" />
-							<input type="button" value="Sell house" id="sellhousebutton"/>
-						</div>
-						<div id="owned"></div>
-					</div>
-				</td>
-				<td>
+		<div id="manage">
+			<div id="option">
+				<div id="buildings" title="Available buildings"></div>
+				<input type="button" value="Buy house" id="buyhousebutton"/>
+				<input type="button" value="Mortgage" id="mortgagebutton" />
+				<input type="button" value="Sell house" id="sellhousebutton"/>
+			</div>
+			<div id="owned"></div>
+		</div>
+		
+		<p class="button-wrapper">
+			<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." class="btn btn-full" value="Roll Dice"/>
+			<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" class="btn btn-action" />
+		</p>
 					
-					<div id="quickstats">
-						<strong id="pname">Player 1</strong>:
-						<span id="pmoney">$1500</span>
-					</div>
-					
-					<div>
-						<div id="die0" title="Die" class="die die-no-img"></div>
-						<div id="die1" title="Die" class="die die-no-img"></div>
-					</div>
-
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." class="btn" value="Roll Dice"/>
-					<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" class="btn btn-action" />
-				</td>
-			</tr>
-		</table>
 	</div>
 
 	<div id="trade">
@@ -363,10 +354,10 @@
 			</tr>
 			<tr>
 				<td colspan="2" class="trade-cell">
-					<input type="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above." />
-					<input type="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' title="Cancel the trade." />
-					<input type="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" title="Accept the proposed trade." />
-					<input type="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' title="Reject the proposed trade." />
+					<input type="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above." class="btn" />
+					<input type="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' class="btn" title="Cancel the trade." />
+					<input type="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" class="btn" title="Accept the proposed trade." />
+					<input type="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' class="btn" title="Reject the proposed trade." />
 				</td>
 			</tr>
 		</table>

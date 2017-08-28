@@ -3,9 +3,13 @@
 /*
 	by Neill Harmer, @neillharmer
 */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 /* MIXINS
 ------------------------------------------------------------ */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900");
 /* GENERAL CALLINGS
 ------------------------------------------------------------ */
 ::-moz-selection {
@@ -19,6 +23,8 @@ a {
   color: #ed1b24;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   a:hover {
     color: #0072bb; }
@@ -134,10 +140,15 @@ select {
   line-height: 1.5;
   color: #00030c;
   background: #fff;
-  border: 1px solid #efefef !important;
+  border: 1px solid #dedede !important;
   padding: 10px;
   border-radius: 0 !important;
   outline: none !important; }
+  input[type="text"]:active,
+  input[type="password"]:active,
+  textarea:active,
+  select:active {
+    border-color: #000; }
 
 img {
   vertical-align: bottom;
@@ -164,6 +175,8 @@ ul {
 .btn {
   background-color: #ed1b24;
   background-size: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed1b24), to(#0072bb));
+  background-image: -o-linear-gradient(left, #ed1b24, #0072bb);
   background-image: linear-gradient(to right, #ed1b24, #0072bb);
   position: relative;
   z-index: 100;
@@ -178,6 +191,8 @@ ul {
   text-decoration: none;
   cursor: pointer;
   outline: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 0;
   text-align: center;
@@ -185,6 +200,8 @@ ul {
   -webkit-border-radius: 0;
   text-transform: none !important; }
   .btn::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#0072bb), to(#ed1b24));
+    background-image: -o-linear-gradient(left, #0072bb, #ed1b24);
     background-image: linear-gradient(to right, #0072bb, #ed1b24);
     content: '';
     display: block;
@@ -195,9 +212,13 @@ ul {
     opacity: 0;
     width: 100%;
     z-index: -100;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s; }
   .btn:hover::before {
     opacity: 1; }
+  .btn.btn-full {
+    width: 100%; }
 
 .warning {
   font-size: small; }
@@ -207,7 +228,8 @@ ul {
 html {
   height: 100%;
   min-height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 body {
   font: 13px/1 "Nunito Sans", sans-serif;
@@ -217,7 +239,8 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #e4e6e5; }
+  background-color: #e4e6e5;
+  overflow: hidden; }
 
 #setup,
 #noF5,
@@ -242,32 +265,73 @@ body {
 .max-contain {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; }
-
-#moneybar {
-  float: right;
-  border: 0px solid black;
-  background-color: white;
-  margin: 15px;
-  border-radius: 5px;
-  z-index: 14;
+  height: 100%;
+  min-height: 100%;
   position: relative;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+#setup {
+  background: #fff;
+  padding: 30px;
+  border-radius: 3px;
+  width: 45%;
+  margin: auto; }
+  #setup .player-wrap {
+    padding: 10px; }
+    #setup .player-wrap:nth-child(odd) {
+      background: #e6edf6; }
+    #setup .player-wrap input,
+    #setup .player-wrap select {
+      margin: 0 5px; }
 
 #moneybarwrap {
-  position: absolute;
-  min-width: 135px;
-  top: 0px;
-  left: 970px;
-  right: 0px;
+  position: fixed;
+  top: 30px;
+  left: auto;
+  right: 30px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff; }
+  #moneybarwrap #moneybar {
+    padding: 30px 30px 30px 10px;
+    z-index: 14;
+    position: relative;
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  #moneybarwrap .moneybararrowcell {
+    text-align: right;
+    padding: 0; }
+    #moneybarwrap .moneybararrowcell img.money-bar-arrow {
+      height: 25px;
+      width: auto; }
+  #moneybarwrap .moneybarcell {
+    font-size: 15px;
+    padding: 10px;
+    border-width: 3px !important; }
+    #moneybarwrap .moneybarcell strong {
+      font: 11px/1 "Nunito Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 900; }
 
 #propertystats {
   margin-right: 110px; }
@@ -292,90 +356,58 @@ body {
   z-index: 9;
   top: 250px;
   left: 225px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.3); }
-  #control table {
-    margin-bottom: 0; }
-
-#menu {
-  width: 290px;
-  min-height: 32px;
-  margin: 0 15px; }
-  #menu #menutable {
-    padding: 0;
-    font: 900 12px/1 "Nunito Sans", sans-serif;
-    width: 99%;
-    margin: 0;
-    overflow: hidden;
-    /*.menu-item {
-			padding: 0;
-			border-collapse: collapse;
-			text-align: center;
-			display: table-cell;
-			border: none;
-			border-right: 2px solid white;
-			height: 30px;
-			min-width: 90px;
-			width: 90px;
-			max-width: 90px;
-			overflow: hidden;
-		}*/ }
-    #menu #menutable a {
-      background-color: #e4e6e5;
+  width: 530px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #fff; }
+  #control #quickstats {
+    font: 11px/1 "Nunito Sans", sans-serif;
+    border: 3px solid blue;
+    margin: 0 0 15px 0;
+    padding: 10px;
+    width: 100px;
+    float: right; }
+    #control #quickstats #pname {
       text-transform: uppercase;
-      border-radius: 2px 2px 0 0;
-      color: #0072bb;
-      text-decoration: none;
+      font-weight: 900; }
+    #control #quickstats #pmoney {
       display: block;
-      margin-right: 4px;
-      height: 100%;
-      width: 100%;
-      padding: 12px;
-      text-align: center; }
-
-#buy-menu-item {
-  color: #FFFFFF;
-  margin-left: 2px;
-  border-left: none; }
-
-#trade-menu-item {
-  color: #AAAAAA;
-  border-right: none;
-  margin-right: 2px; }
-
-#quickstats {
-  font: 11px/1 "Nunito Sans", sans-serif;
-  border: 3px solid blue;
-  margin: 32px 0 15px 0;
-  padding: 10px;
-  width: 80px; }
-  #quickstats #pname {
-    text-transform: uppercase;
-    font-weight: 900; }
-  #quickstats #pmoney {
-    display: block;
-    font-size: 15px;
-    padding: 5px 0 0; }
-
-#alert {
-  width: 350px;
-  height: 275px;
-  margin: 0 10px 0 0;
-  padding: 10px;
-  border: 1px solid #e4e6e5;
-  font: 13px/1.5 "Nunito Sans", sans-serif;
-  background-color: #fff;
-  overflow-y: scroll; }
-
-#landed {
-  padding: 6px 10px;
-  font: 13px/1 "Nunito Sans", sans-serif !important;
-  border: 1px solid #e4e6e5;
-  background-color: #e4e6e5;
-  border-top: none;
-  width: 350px;
-  margin: 0; }
+      font-size: 15px;
+      padding: 5px 0 0; }
+  #control .the-dice {
+    float: right;
+    margin: 14px 10px 0 0; }
+    #control .the-dice .die {
+      margin: 0 3px;
+      display: inline-block;
+      width: 30px;
+      height: 30px; }
+  #control .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    #control .menu li {
+      display: inline-block; }
+      #control .menu li a {
+        display: block;
+        padding: 10px; }
+  #control #alert {
+    width: 100%;
+    height: 275px;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border: 1px solid #e4e6e5;
+    font: 13px/1.5 "Nunito Sans", sans-serif;
+    background-color: #fff;
+    overflow-y: scroll; }
+  #control #landed {
+    padding: 10px 10px;
+    font: 13px/1 "Nunito Sans", sans-serif !important;
+    border: 1px solid #e4e6e5;
+    background-color: #e4e6e5;
+    border-top: none;
+    width: 100%;
+    margin: 0; }
 
 #manage {
   width: 308px;
@@ -666,18 +698,6 @@ body {
   bottom: 20px;
   font-size: 16px; }
 
-.die {
-  margin: 5px;
-  float: left;
-  width: 35px;
-  height: 35px; }
-
-.die-no-img {
-  border-radius: 6px;
-  font-weight: bold;
-  border: 2px solid black;
-  padding: 5px 10px; }
-
 .house {
   width: 25px;
   height: 19px;
@@ -756,21 +776,6 @@ body {
 .enlarge-token {
   height: 45px;
   width: 150px; }
-
-.moneybarcell {
-  width: 83px;
-  min-width: 83px; }
-
-.moneybararrowcell {
-  background: white;
-  width: 30px;
-  border: none;
-  text-align: right;
-  padding: 0px; }
-
-.money-bar-arrow {
-  height: 30px;
-  width: 30px; }
 
 .propertycellcheckbox {
   width: 20px;

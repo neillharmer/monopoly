@@ -2639,7 +2639,7 @@ game_ns._draw_setup.draw_player_wrappers = function(max) {
 	var content_intel = "";
 	content_intel += "<select class='player-intel' title='Choose whether this player is controled by a human or by the computer.'>";
 	content_intel += "	<option value='0' selected='selected'>Human</option>";
-	content_intel += "	<option value='1'>AI (Test)</option>";
+	content_intel += "	<option value='1'>AI</option>";
 	content_intel += "</select>";
 
   var content_colors = "<select class='player-color' title='Player color'>";

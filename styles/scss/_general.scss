@@ -100,10 +100,14 @@ select {
 	line-height: 1.5;
 	color: $black;
 	background: $white; 
-	border: 1px solid #efefef !important;
+	border: 1px solid #dedede !important;
 	padding: 10px;
 	border-radius: 0 !important;
 	outline: none !important;
+	
+	&:active {
+		border-color: #000;
+	}
 }
 
 
@@ -164,6 +168,10 @@ ul {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 	text-transform: none !important;
+	
+	&.btn-full {
+		width: 100%;
+	}
 }
 
 
