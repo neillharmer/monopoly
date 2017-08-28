@@ -41,7 +41,7 @@ h1 {
     color: inherit;
     text-decoration: underline; }
     h1 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h2 {
   margin: 0 0 30px;
@@ -53,7 +53,7 @@ h2 {
     color: inherit;
     text-decoration: underline; }
     h2 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h3 {
   margin: 0 0 30px;
@@ -65,7 +65,7 @@ h3 {
     color: inherit;
     text-decoration: underline; }
     h3 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h4 {
   margin: 0 0 30px;
@@ -77,7 +77,7 @@ h4 {
     color: inherit;
     text-decoration: underline; }
     h4 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h5 {
   margin: 0 0 30px;
@@ -89,7 +89,7 @@ h5 {
     color: inherit;
     text-decoration: underline; }
     h5 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h6 {
   margin: 0 0 30px;
@@ -101,7 +101,7 @@ h6 {
     color: inherit;
     text-decoration: underline; }
     h6 a:hover {
-      color: #00030c; }
+      color: #4f5d50; }
 
 h1 {
   font-size: 50px; }
@@ -138,7 +138,7 @@ textarea,
 select {
   font: 14px "Nunito Sans", sans-serif;
   line-height: 1.5;
-  color: #00030c;
+  color: #4f5d50;
   background: #fff;
   border: 1px solid #dedede !important;
   padding: 10px;
@@ -173,20 +173,15 @@ ul {
     margin-bottom: 5px; }
 
 .btn {
-  background-color: #ed1b24;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ed1b24), to(#0072bb));
-  background-image: -o-linear-gradient(left, #ed1b24, #0072bb);
-  background-image: linear-gradient(to right, #ed1b24, #0072bb);
-  position: relative;
-  z-index: 100;
+  background: #1fb25a;
   display: inline-block;
   width: auto;
   height: auto;
   margin: 0 auto;
-  padding: 15px 30px !important;
+  padding: 15px 20px !important;
   border: none;
-  font: 15px/1 "Nunito Sans", sans-serif;
+  font: 700 13px/1 "Nunito Sans", sans-serif !important;
+  letter-spacing: 2px;
   color: #fff !important;
   text-decoration: none;
   cursor: pointer;
@@ -198,27 +193,45 @@ ul {
   text-align: center;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  text-transform: none !important; }
-  .btn::before {
-    background-image: -webkit-gradient(linear, left top, right top, from(#0072bb), to(#ed1b24));
-    background-image: -o-linear-gradient(left, #0072bb, #ed1b24);
-    background-image: linear-gradient(to right, #0072bb, #ed1b24);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    z-index: -100;
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s; }
-  .btn:hover::before {
-    opacity: 1; }
+  text-transform: uppercase !important; }
   .btn.btn-full {
     width: 100%; }
+  .btn.btn-fade {
+    padding: 20px 30px !important;
+    background-color: #ed1b24;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ed1b24), to(#0072bb));
+    background-image: -o-linear-gradient(left, #ed1b24, #0072bb);
+    background-image: linear-gradient(to right, #ed1b24, #0072bb);
+    position: relative;
+    z-index: 100; }
+    .btn.btn-fade::before {
+      background-image: -webkit-gradient(linear, left top, right top, from(#0072bb), to(#ed1b24));
+      background-image: -o-linear-gradient(left, #0072bb, #ed1b24);
+      background-image: linear-gradient(to right, #0072bb, #ed1b24);
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      z-index: -100;
+      -webkit-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      transition: opacity 0.5s; }
+    .btn.btn-fade:hover::before {
+      opacity: 1; }
+  .btn.btn-action {
+    background: #ed1b24; }
+  .btn.btn-text {
+    padding: 0 !important;
+    color: #0072bb !important;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    background: transparent;
+    font: 700 12px/1 "Nunito Sans", sans-serif !important; }
 
 .warning {
   font-size: small; }
@@ -233,7 +246,7 @@ html {
 
 body {
   font: 13px/1 "Nunito Sans", sans-serif;
-  color: #00030c;
+  color: #4f5d50;
   text-rendering: optimizeLegibility;
   height: 100%;
   width: 100%;
@@ -263,7 +276,7 @@ body {
   display: none; }
 
 .max-contain {
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   height: 100%;
   min-height: 100%;
@@ -289,7 +302,7 @@ body {
   background: #fff;
   padding: 30px;
   border-radius: 3px;
-  width: 45%;
+  width: 50%;
   margin: auto; }
   #setup .player-wrap {
     padding: 10px; }
@@ -299,8 +312,9 @@ body {
     #setup .player-wrap select {
       margin: 0 5px; }
 
-#moneybarwrap {
+#moneybar {
   position: fixed;
+  z-index: 14;
   top: 30px;
   left: auto;
   right: 30px;
@@ -308,56 +322,45 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #fff; }
-  #moneybarwrap #moneybar {
-    padding: 30px 30px 30px 10px;
-    z-index: 14;
-    position: relative;
-    cursor: default;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none; }
-  #moneybarwrap .moneybararrowcell {
-    text-align: right;
-    padding: 0; }
-    #moneybarwrap .moneybararrowcell img.money-bar-arrow {
-      height: 25px;
-      width: auto; }
-  #moneybarwrap .moneybarcell {
-    font-size: 15px;
+  background-color: #fff;
+  padding: 20px;
+  width: 140px; }
+  #moneybar .money-bar-arrow {
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    position: absolute;
+    left: 10px;
+    margin-top: 5px; }
+  #moneybar .moneybarcell {
+    margin-bottom: 12px;
     padding: 10px;
     border-width: 3px !important; }
-    #moneybarwrap .moneybarcell strong {
+    #moneybar .moneybarcell strong {
       font: 11px/1 "Nunito Sans", sans-serif;
       text-transform: uppercase;
       font-weight: 900; }
-
-#propertystats {
-  margin-right: 110px; }
-
-#board {
-  border: 2px solid black;
-  border-spacing: 3px;
-  margin: 25px;
-  background: #cde6d0; }
-
-#jail {
-  border: 1px solid black;
-  height: 65px;
-  width: 65px;
-  position: relative;
-  top: 73px;
-  left: -73px;
-  z-index: 2; }
+    #moneybar .moneybarcell .money-total {
+      display: block;
+      position: relative;
+      font-size: 15px;
+      padding: 5px 0 0 10px; }
+      #moneybar .moneybarcell .money-total:before {
+        font-size: 15px;
+        display: block;
+        position: absolute;
+        content: '\0024';
+        left: 0; }
 
 #control {
   position: absolute;
   z-index: 9;
-  top: 250px;
-  left: 225px;
+  top: 50%;
+  left: 50%;
+  margin: -230px 0 0 -265px;
   width: 530px;
-  padding: 20px;
+  padding: 20px 20px 110px;
   border-radius: 3px;
   background-color: #fff; }
   #control #quickstats {
@@ -366,7 +369,8 @@ body {
     margin: 0 0 15px 0;
     padding: 10px;
     width: 100px;
-    float: right; }
+    float: right;
+    display: none; }
     #control #quickstats #pname {
       text-transform: uppercase;
       font-weight: 900; }
@@ -375,8 +379,8 @@ body {
       font-size: 15px;
       padding: 5px 0 0; }
   #control .the-dice {
-    float: right;
-    margin: 14px 10px 0 0; }
+    position: absolute;
+    right: 18px; }
     #control .the-dice .die {
       margin: 0 3px;
       display: inline-block;
@@ -394,24 +398,33 @@ body {
   #control #alert {
     width: 100%;
     height: 275px;
-    margin: 0 10px 0 0;
-    padding: 10px;
+    margin: 0;
+    padding: 15px;
     border: 1px solid #e4e6e5;
     font: 13px/1.5 "Nunito Sans", sans-serif;
     background-color: #fff;
     overflow-y: scroll; }
   #control #landed {
-    padding: 10px 10px;
+    padding: 12px 10px 10px;
     font: 13px/1 "Nunito Sans", sans-serif !important;
     border: 1px solid #e4e6e5;
     background-color: #e4e6e5;
     border-top: none;
-    width: 100%;
-    margin: 0; }
+    position: absolute;
+    left: 20px;
+    right: 20px; }
+  #control .button-wrapper {
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    position: absolute; }
 
 #manage {
-  width: 308px;
-  border: 1px solid gray; }
+  width: 100%;
+  height: 275px;
+  border: 1px solid #e4e6e5;
+  font: 13px/1.5 "Nunito Sans", sans-serif;
+  background-color: #fff; }
 
 #option {
   border-bottom: 1px solid #e4e6e5;
@@ -491,143 +504,69 @@ body {
   font-size: 20px;
   background-color: white; }
 
-#popup {
-  width: 300px;
-  min-width: 300px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  text-align: center;
-  word-wrap: break-word;
-  line-height: 1.5;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: white;
-  display: block;
-  z-index: 13;
-  margin: auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
-
-#popupwrap {
-  position: absolute;
-  top: 255px;
-  left: 0px;
-  width: 100%;
-  background-color: transparent;
-  z-index: 13;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none; }
-
-#popuptext {
-  overflow-x: auto; }
-
-/* #popupclose {
-	display: none;
-	position: absolute;
-	top: -24px;
-	right: -25px;
-	width: 30px;
-	height: 30px;
-	border: none;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 12;
-} */
-#popupclose input {
-  margin: 0px;
-  background-color: red;
-  height: 18px;
-  width: 18px;
-  padding: 0px; }
-
-#popupbackground {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #000000;
-  opacity: 0.5;
-  z-index: 10; }
-
-#popupdrag {
-  width: 100%;
-  height: 16px;
-  position: absolute;
-  top: -16px;
-  cursor: move; }
-
-#stats {
-  max-width: 914px;
-  min-width: 454px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  text-align: center;
-  word-wrap: break-word;
-  line-height: 1.5;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: white;
-  display: block;
-  z-index: 17;
-  margin: auto;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-
-#statswrap {
-  position: absolute;
-  top: 250px;
-  left: 0px;
-  width: 100%;
-  background-color: transparent;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-
-#statstext {
-  overflow: hidden;
-  min-height: 70px; }
-
-#statsclose {
-  display: block;
-  position: absolute;
-  top: -24px;
-  right: -25px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  overflow: visible;
-  z-index: 17; }
-
+#popupbackground,
 #statsbackground {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #000000;
-  opacity: .5;
-  z-index: 16; }
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 20; }
 
-#statsdrag {
-  width: 100%;
-  height: 16px;
+#popupwrap,
+#statswrap {
   position: absolute;
-  top: -16px;
-  cursor: move; }
+  top: 25%;
+  left: 0;
+  width: 100%;
+  z-index: 23;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+#popup,
+#stats {
+  width: 400px;
+  min-width: 400px;
+  padding: 25px;
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 3px;
+  background-color: #fff;
+  display: block;
+  z-index: 13;
+  margin: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+#popuptext {
+  overflow-x: auto; }
+
+#stats {
+  width: auto;
+  max-width: 914px;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  left: 0; }
+  #stats #statstext {
+    overflow: hidden;
+    min-height: 70px; }
+  #stats #statsclose {
+    display: block;
+    position: absolute;
+    top: -24px;
+    right: -25px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 27; }
 
 #deed {
   position: fixed;
@@ -710,66 +649,72 @@ body {
   vertical-align: middle;
   float: right; }
 
+#board {
+  background: #cde6d0;
+  margin: auto; }
+
+#jail {
+  border-left: 3px solid #4f5d50 !important;
+  border-bottom: 3px solid #4f5d50 !important;
+  background: #f7941d;
+  height: 65px;
+  width: 65px;
+  position: relative;
+  top: 65px;
+  left: 52px;
+  z-index: 2; }
+
 .cell {
   position: relative;
-  top: 0px;
-  left: 0px;
-  padding: 0px;
+  top: 0;
+  left: 0;
+  padding: 0;
   vertical-align: bottom;
-  background-repeat: no-repeat;
-  background-size: auto 40px; }
+  border: 2px solid #4f5d50 !important; }
+  .cell.board-corner {
+    width: 120px;
+    height: 102px; }
+  .cell.board-top {
+    width: 75px;
+    height: 120px;
+    border-bottom: 3px solid #4f5d50 !important; }
+  .cell.board-bottom {
+    width: 75px;
+    height: 120px; }
+  .cell.board-left {
+    width: 120px;
+    height: 75px; }
+  .cell.board-right {
+    width: 120px;
+    height: 75px; }
 
 .board-center {
   width: 675px;
   border: none;
-  vertical-align: bottom;
-  background-repeat: no-repeat;
-  background-size: auto 40px; }
-
-.board-corner {
-  width: 102px;
-  height: 102px; }
-
-.board-top {
-  width: 72px;
-  height: 102px; }
-
-.board-bottom {
-  width: 72px;
-  height: 102px; }
-
-.board-left {
-  width: 102px;
-  height: 72px; }
-
-.board-right {
-  width: 102px;
-  height: 72px; }
+  border: 1px solid #4f5d50 !important; }
 
 .enlarge {
   width: 150px;
   height: 200px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: #fff;
+  border: 3px solid black;
   text-align: center;
-  font-size: 12px;
-  font-family: arial, sans-serif;
   position: fixed;
   z-index: 15; }
 
 .enlarge-color {
-  background: white;
+  background: #fff;
   width: 100%;
   height: 40px; }
 
 .enlarge-name {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
-  background-color: white;
+  background-color: #fff;
   height: 45px; }
 
 .enlarge-price {
-  background-color: white;
+  background-color: #fff;
   vertical-align: bottom;
   height: 25px; }
 
@@ -789,7 +734,7 @@ body {
   height: 20px;
   border-width: 1px;
   border-style: solid;
-  border-color: white; }
+  border-color: #fff; }
 
 .propertycellname {
   height: 20px;

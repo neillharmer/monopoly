@@ -149,15 +149,17 @@ ul {
 }
 
 
+// buttons
 .btn { 
-	@include gradient-animation( $board-red, $board-blue, 0.5s );
+	background: $board-green;
 	display: inline-block;
 	width: auto;
 	height: auto;
 	margin: 0 auto;
-	padding: 15px 30px !important;
+	padding: 15px 20px !important;
 	border: none;
-	font: 15px/1 $primaryFont;
+	font: 700 13px/1 $primaryFont !important;
+	letter-spacing: 2px;
 	color: $white !important;
 	text-decoration: none;
 	cursor: pointer;
@@ -167,10 +169,28 @@ ul {
 	text-align: center;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
-	text-transform: none !important;
+	text-transform: uppercase !important;
 	
 	&.btn-full {
 		width: 100%;
+	}
+	
+	&.btn-fade {
+		padding: 20px 30px !important;
+		@include gradient-animation( $board-red, $board-blue, 0.5s );
+	}
+	
+	&.btn-action {
+		background: $board-red;
+	}
+	
+	&.btn-text {
+		padding: 0 !important;
+		color: $board-blue !important;
+		margin-left: 10px;
+		letter-spacing: 1px;
+		background: transparent;
+		font: 700 12px/1 $primaryFont !important;
 	}
 }
 

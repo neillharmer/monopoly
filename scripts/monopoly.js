@@ -1378,6 +1378,7 @@ function updateMoney() {
 
 		$("#moneybarrow" + i).show();
 		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+		document.getElementById("p" + i + "arrow").style.borderRight = "10px solid " + p_i.color;
 		document.getElementById("p" + i + "money").innerHTML = p_i.money;
 		document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 	}
@@ -2310,7 +2311,7 @@ function land(increasedRent) {
 				buy();
 			}
 		} else {
-			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' onclick='buy();' value='Buy ($" + s.price + ")' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
+			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' onclick='buy();' class='btn btn-text' value='Buy Now $" + s.price + "' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
 		}
 
 
@@ -2617,7 +2618,7 @@ function play() {
 }
 
 var game_ns = {
-	available_colors: ['blue', 'red', 'green', 'yellow', 'aqua', 'black', 'fuchsia', 'gray', 'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'silver', 'teal',]
+	available_colors: ['blue', 'red', 'green', 'aqua', 'black', 'fuchsia', 'lime', 'maroon', 'gold', 'orange', 'purple',]
 }
 
 game_ns.draw_setup = function() {
@@ -2639,7 +2640,7 @@ game_ns._draw_setup.draw_player_wrappers = function(max) {
 	var content_intel = "";
 	content_intel += "<select class='player-intel' title='Choose whether this player is controled by a human or by the computer.'>";
 	content_intel += "	<option value='0' selected='selected'>Human</option>";
-	content_intel += "	<option value='1'>AI</option>";
+	content_intel += "	<option value='1'>Computer</option>";
 	content_intel += "</select>";
 
   var content_colors = "<select class='player-color' title='Player color'>";

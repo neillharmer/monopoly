@@ -73,7 +73,7 @@ body {
 
 // container 
 .max-contain {
-	max-width: 1200px;
+	max-width: 1024px;
 	margin: 0 auto;
 	height: 100%;
 	min-height: 100%;
@@ -96,7 +96,7 @@ body {
 	background: $white;
 	padding: 30px;
 	border-radius: 3px;
-	width: 45%;
+	width: 50%;
 	margin: auto;
 	
 	.player-wrap {
@@ -116,37 +116,33 @@ body {
 
 
 
+
 // moneybar (player cash tracker)
-#moneybarwrap {
+#moneybar {
 	position: fixed;
+	z-index: 14;
 	top: 30px;
 	left: auto;
 	right: 30px;
 	user-select: none;
 	background-color: $white;
-
-	#moneybar {
-		padding: 30px 30px 30px 10px;
-		z-index: 14;
-		position: relative;
-		cursor: default;
-		user-select: none;
-	}
+	padding: 20px;
+	width: 140px;
 	
 	// arrow
-	.moneybararrowcell {
-		text-align: right;
-		padding: 0;
-
-		img.money-bar-arrow {
-			height: 25px;
-			width: auto;
-		}
+	.money-bar-arrow {
+		width: 0; 
+		height: 0; 
+		border-top: 13px solid transparent;
+		border-bottom: 13px solid transparent; // right border is generated in JS
+		position: absolute;
+		left: 10px;
+		margin-top: 5px;
 	}
 	
 	// name and money count
 	.moneybarcell {
-		font-size: 15px;
+		margin-bottom: 12px;
 		padding: 10px;
 		border-width: 3px !important;
 
@@ -154,35 +150,23 @@ body {
 			font: 11px/1 $primaryFont;
 			text-transform: uppercase;
 			font-weight: 900;
-		}		
+		}
+		
+		.money-total {
+			display: block;
+			position: relative;
+			font-size: 15px;
+			padding: 5px 0 0 10px;
+			
+			&:before {
+				font-size: 15px;
+				display: block;
+				position: absolute;
+				content: '\0024';
+				left: 0;
+			}
+		}	
 	}
-}
-
-
-
-
-
-#propertystats {
-	margin-right: 110px;
-}
-
-
-
-#board {
-	border: 2px solid black;
-	border-spacing: 3px;
-	margin: 25px;
-	background: $board-bg;
-}
-
-#jail {
-	border: 1px solid black;
-	height: 65px;
-	width: 65px;
-	position: relative;
-	top: 73px;
-	left: -73px;
-	z-index: 2;
 }
 
 
@@ -193,10 +177,11 @@ body {
 #control {
 	position: absolute;
 	z-index: 9;
-	top: 250px;
-	left: 225px;
+	top: 50%;
+	left: 50%;
+	margin: -230px 0 0 -265px;
 	width: 530px;
-	padding: 20px;
+	padding: 20px 20px 110px;
 	border-radius: 3px;
 	background-color: $white;
 	
@@ -208,6 +193,7 @@ body {
 		padding: 10px;
 		width: 100px;
 		float: right;
+		display: none;
 
 		#pname {
 			text-transform: uppercase;
@@ -223,8 +209,8 @@ body {
 	
 	// dice
 	.the-dice {
-		float: right;
-		margin: 14px 10px 0 0;
+		position: absolute;
+		right: 18px;
 		
 		.die {
 			margin: 0 3px;
@@ -254,35 +240,42 @@ body {
 	#alert {
 		width: 100%;
 		height: 275px;
-		margin: 0 10px 0 0;
-		padding: 10px;
+		margin: 0;
+		padding: 15px;
 		border: 1px solid $grey;
 		font: 13px/1.5 $primaryFont;
 		background-color: $white;
 		overflow-y: scroll;
 	}
-
+	
 	#landed {	
-		padding: 10px 10px;
+		padding: 12px 10px 10px;
 		font: 13px/1 $primaryFont !important;
 		border: 1px solid $grey;
 		background-color: $grey;
 		border-top: none;
-		width: 100%;
-		margin: 0;
+		position: absolute;
+		left: 20px;
+		right: 20px;
+	}
+	
+	.button-wrapper {
+		left: 20px;
+		right: 20px;
+		bottom: 0;
+		position: absolute;
 	}
 }
 
 
 
 
-
-
-
-
 #manage {
-	width: 308px;
-	border: 1px solid gray;
+	width: 100%;
+	height: 275px;
+	border: 1px solid $grey;
+	font: 13px/1.5 $primaryFont;
+	background-color: $white;
 }
 
 #option {
@@ -389,34 +382,42 @@ body {
 
 
 
-// Popup
-#popup {
-	width: 300px;
-	min-width: 300px;
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	padding: 10px;
-	text-align: center;
-	word-wrap: break-word;
-	line-height: 1.5;
-	border: 2px solid black;
-	border-radius: 10px;
-	background-color: white;
-	display: block;
-	z-index: 13;
-	margin: auto;
-	-webkit-user-select: none;
+
+
+// popup and stats
+#popupbackground,
+#statsbackground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.65);
+	z-index: 20;
+}
+
+#popupwrap,
+#statswrap {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	width: 100%;
+	z-index: 23;
 	user-select: none;
 }
 
-#popupwrap {
-	position: absolute;
-	top: 255px;
-	left: 0px;
-	width: 100%;
-	background-color: transparent;
+#popup,
+#stats {
+	width: 400px;
+	min-width: 400px;
+	padding: 25px;
+	text-align: center;
+	word-wrap: break-word;
+	border-radius: 3px;
+	background-color: $white;
+	display: block;
 	z-index: 13;
-	-webkit-user-select: none;
+	margin: auto;
 	user-select: none;
 }
 
@@ -424,112 +425,38 @@ body {
 	overflow-x: auto;
 }
 
-/* #popupclose {
-	display: none;
-	position: absolute;
-	top: -24px;
-	right: -25px;
-	width: 30px;
-	height: 30px;
-	border: none;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 12;
-} */
 
-#popupclose input {
-	margin: 0px;
-	background-color: red;
-	height: 18px;
-	width: 18px;
-	padding: 0px;
-}
 
-#popupbackground {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	background-color: #000000;
-	opacity: 0.5;
-	z-index: 10;
-}
 
-#popupdrag {
-	width: 100%;
-	height: 16px;
-	position: absolute;
-	top: -16px;
-	cursor: move;
-}
 
+// player stats 
 #stats {
+	width: auto;
 	max-width: 914px;
-	min-width: 454px;
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	padding: 10px;
-	text-align: center;
-	word-wrap: break-word;
-	line-height: 1.5;
-	border: 2px solid black;
-	border-radius: 10px;
-	background-color: white;
-	display: block;
-	z-index: 17;
-	margin: auto;
+	padding: 20px;
 	position: relative;
-	top: 0px;
-	left: 0px;
-	user-select: none;
+	top: 0;
+	left: 0;
+
+	#statstext {
+		overflow: hidden;
+		min-height: 70px;
+	}
+
+	#statsclose {
+		display: block;
+		position: absolute;
+		top: -24px;
+		right: -25px;
+		width: 30px;
+		height: 30px;
+		border: none;
+		cursor: pointer;
+		overflow: visible;
+		z-index: 27;
+	}
 }
 
-#statswrap {
-	position: absolute;
-	top: 250px;
-	left: 0px;
-	width: 100%;
-	background-color: transparent;
-	user-select: none;
-}
-
-#statstext {
-	overflow: hidden;
-	min-height: 70px;
-}
-
-#statsclose {
-	display: block;
-	position: absolute;
-	top: -24px;
-	right: -25px;
-	width: 30px;
-	height: 30px;
-	border: none;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 17;
-}
-
-#statsbackground {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	background-color: #000000;
-	opacity: .5;
-	z-index: 16;
-}
-
-#statsdrag {
-	width: 100%;
-	height: 16px;
-	position: absolute;
-	top: -16px;
-	cursor: move;
-}
 
 
 
@@ -637,78 +564,102 @@ body {
 }
 
 
+
+
+
+// the board background
+#board {
+	background: $board-bg;
+	margin: auto;
+}
+
+
+#jail {
+	border-left: 3px solid $board-breaks !important;
+	border-bottom: 3px solid $board-breaks !important;
+	background: $board-orange;
+	height: 65px;
+	width: 65px;
+	position: relative;
+    top: 65px;
+    left: 52px;
+	z-index: 2;
+}
+
+
 // the board specifics
 .cell {
 	position: relative;
-	top: 0px;
-	left: 0px;
-	padding: 0px;
+	top: 0;
+	left: 0;
+	padding: 0;
 	vertical-align: bottom;
-	background-repeat: no-repeat;
-	background-size: auto 40px;
+	border: 2px solid $black !important;
+
+	&.board-corner {
+		width: 120px;
+		height: 102px;
+	}
+
+	&.board-top {
+		width: 75px;
+		height: 120px;
+		border-bottom: 3px solid $board-breaks !important;
+	}
+
+	&.board-bottom {
+		width: 75px;
+		height: 120px;
+	}
+
+	&.board-left {
+		width: 120px;
+		height: 75px;
+	}
+
+	&.board-right {
+		width: 120px;
+		height: 75px;
+	}
 }
+
 
 .board-center {
 	width: 675px;
 	border: none;
-	vertical-align: bottom;
-	background-repeat: no-repeat;
-	background-size: auto 40px;
-}
-
-.board-corner {
-	width: 102px;
-	height: 102px;
-}
-
-.board-top {
-	width: 72px;
-	height: 102px;
-}
-
-.board-bottom {
-	width: 72px;
-	height: 102px;
-}
-
-.board-left {
-	width: 102px;
-	height: 72px;
-}
-
-.board-right {
-	width: 102px;
-	height: 72px;
+	border: 1px solid $board-breaks !important;
 }
 
 
+
+
+
+// enlarge
 .enlarge {
 	width: 150px;
 	height: 200px;
-	background-color: white;
-	border: 2px solid black;
+	background-color: $white;
+	border: 3px solid black;
 	text-align: center;
-	font-size: 12px;
-	font-family: arial, sans-serif;
 	position: fixed;
 	z-index: 15;
 }
 
 .enlarge-color {
-	background: white;
+	background: $white;
 	width: 100%;
 	height: 40px;
 }
 
 .enlarge-name {
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 20px;
-	background-color: white;
+	background-color: $white;
 	height: 45px;
 }
 
 .enlarge-price {
-	background-color: white;
+	background-color: $white;
 	vertical-align: bottom;
 	height: 25px;
 }
@@ -735,7 +686,7 @@ body {
 	height: 20px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: white;
+	border-color: $white;
 }
 
 .propertycellname {
