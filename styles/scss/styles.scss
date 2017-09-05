@@ -587,6 +587,8 @@ body {
 }
 
 
+
+
 // the board specifics
 .cell {
 	position: relative;
@@ -602,24 +604,24 @@ body {
 	}
 
 	&.board-top {
-		width: 75px;
+		width: 80px;
 		height: 120px;
 		border-bottom: 3px solid $board-breaks !important;
 	}
 
 	&.board-bottom {
-		width: 75px;
+		width: 80px;
 		height: 120px;
 	}
 
 	&.board-left {
 		width: 120px;
-		height: 75px;
+		height: 80px;
 	}
 
 	&.board-right {
 		width: 120px;
-		height: 75px;
+		height: 80px;
 	}
 }
 
@@ -627,7 +629,7 @@ body {
 .board-center {
 	width: 675px;
 	border: none;
-	border: 1px solid $board-breaks !important;
+	//border: 1px solid $board-breaks !important;
 }
 
 
@@ -751,12 +753,16 @@ body {
 
 .cell-name {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	text-align: center;
 	width: 100%;
 }
 
+
+
+
+// peice
 .cell-position-holder {
 	width: 100%;
 	height: 100%;
@@ -765,51 +771,46 @@ body {
 }
 
 .cell-position {
-	height: 16px;
-	width: 16px;
-	//position: absolute;
-	//top: 0;
-	//left: 0;
+	height: 20px;
+	width: 20px;
+	border-radius: 3px;
 }
 
+
+
+
+// marked for owners
 .cell-owner {
-	background-size: cover;
 	position: absolute;
 }
+	.board-top .cell-owner {
+		height: 15px;
+		left: 0;
+		top: -25px;
+		width: 72px;
 
+	}
 
-.board-top .cell-owner {
-	background-image: url("images/hori-bar.png");
-	height: 15px;
-	left: 0px;
-	top: -25px;
-	width: 72px;
+	.board-bottom .cell-owner {
+		bottom: -25px;
+		height: 15px;
+		left: 0;
+		width: 72px;
+	}
 
-}
+	.board-left .cell-owner {
+		height: 68px;
+		left: -25px;
+		top: 0;
+		width: 15px;
+	}
 
-.board-bottom .cell-owner {
-	background-image: url("images/hori-bar.png");
-	bottom: -25px;
-	height: 15px;
-	left: 0px;
-	width: 72px;
-}
-
-.board-left .cell-owner {
-	background-image: url("images/vert-bar.png");
-	height: 68px;
-	left: -25px;
-	top: 0px;
-	width: 15px;
-}
-
-.board-right .cell-owner {
-	background-image: url("images/vert-bar.png");
-	height: 68px;
-	right: -25px;
-	top: 0px;
-	width: 15px;
-}
+	.board-right .cell-owner {
+		height: 68px;
+		right: -25px;
+		top: 0;
+		width: 15px;
+	}
 
 
 
