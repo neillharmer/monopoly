@@ -341,33 +341,32 @@ body {
 #trade-leftp-name {
 	font-size: 13px;
 	font-weight: bold;
+	
+	option {
+		font-size: 13px;
+		font-weight: normal;
+	}
 }
 
-#trade-leftp-name option {
-	font-size: 13px;
-	font-weight: normal;
-}
 
 #trade-rightp-name {
 	font-size: 13px;
 	font-weight: bold;
+	
+	option {
+		font-size: 13px;
+		font-weight: normal;
+	}
 }
 
-#trade-rightp-name option {
-	font-size: 13px;
-	font-weight: normal;
-}
 
-#trade-leftp-money {
-	width: 90%;
-}
-
+#trade-leftp-money,
 #trade-rightp-money {
 	width: 90%;
 }
 
 #deedcolor {
-	background: white;
+	background: $white;
 	width: 100%;
 	height: 48px;
 }
@@ -376,7 +375,7 @@ body {
 	margin-top: 10px;
 	font-weight: bold;
 	font-size: 20px;
-	background-color: white;
+	background-color: $white;
 }
 
 
@@ -463,10 +462,10 @@ body {
 // deed
 #deed {
 	position: fixed;
-	border: 2px solid black;
+	border: 2px solid $black;
 	width: 235px;
 	height: 275px;
-	background-color: white;
+	background-color: $white;
 	z-index: 18;
 	user-select: none;
 }
@@ -478,7 +477,7 @@ body {
 #deed-header {
 	width: 215px;
 	height: 48px;
-	border: 1px solid black;
+	border: 1px solid $black;
 	margin: 9px;
 	background-color: yellow;
 	text-align: center;
@@ -641,7 +640,7 @@ body {
 	width: 150px;
 	height: 200px;
 	background-color: $white;
-	border: 3px solid black;
+	border: 3px solid $black;
 	text-align: center;
 	position: fixed;
 	z-index: 15;
@@ -728,7 +727,7 @@ body {
 }
 
 .statscell {
-	border: 2px solid black;
+	border: 2px solid $black;
 	padding: 8px;
 	vertical-align: top;
 	width: 202px;
@@ -783,12 +782,12 @@ body {
 .cell-owner {
 	position: absolute;
 }
+
 	.board-top .cell-owner {
 		height: 15px;
 		left: 0;
 		top: -25px;
 		width: 72px;
-
 	}
 
 	.board-bottom .cell-owner {
